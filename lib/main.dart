@@ -1,5 +1,6 @@
 import 'dart:async';
-
+import 'dart:developer';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,19 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CUP',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blueGrey,
-      ),
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          // primarySwatch: Colors.lightBlue,
+          ),
       home: const MyHomePage(title: 'Cup'),
     );
   }
@@ -75,28 +76,150 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(widget.title),
+        backgroundColor: Colors.white,
+        title: Text(widget.title,
+            style: GoogleFonts.montserrat(
+                color: Colors.black,
+                // fontSize: 35,
+                fontWeight: FontWeight.w300)),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Welcome To Code Up',
-              style: Theme.of(context).textTheme.headline3,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Welcome To ',
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w300)),
+                Text(
+                  'Code Up',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.lightBlue,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w300),
+                ),
+              ],
             ),
-            Text(
-              'Where Big Dreams become alive',
-              style: Theme.of(context).textTheme.headline4,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Where ',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  'Big ',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'Dreams become ',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  'Alive ',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.lightGreen, fontSize: 35),
+                ),
+              ],
             ),
             Text(
               'We are coming in:',
-              style: Theme.of(context).textTheme.headline4,
+              style: GoogleFonts.montserrat(
+                  color: Colors.black,
+                  fontSize: 35,
+                  fontWeight: FontWeight.w300),
             ),
-            Text(
-              '${duration.inDays.remainder(365).toString().padLeft(2, '0')} : ${duration.inHours.remainder(24).toString().padLeft(2, '0')} : ${duration.inMinutes.remainder(60).toString().padLeft(2, '0')} : ${duration.inSeconds.remainder(60).toString().padLeft(2, '0')}',
-              style: Theme.of(context).textTheme.headline4,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(
+                    '${duration.inDays.remainder(365).toString().padLeft(2, '0')} :',
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 45,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  Text(
+                    "Days",
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w300),
+                  )
+                ]),
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(
+                    ' ${duration.inHours.remainder(24).toString().padLeft(2, '0')} :',
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 45,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  Text(
+                    "Hours",
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w300),
+                  )
+                ]),
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(
+                    ' ${duration.inMinutes.remainder(24).toString().padLeft(2, '0')} ',
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 45,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  Text(
+                    "Min",
+                    style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w300),
+                  )
+                ]),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              color: Colors.grey[100],
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Text(
+                  "Our Vision",
+                  style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 50,
+                      fontWeight: FontWeight.w300),
+                ),
+                Text("     "),
+                Text(
+                  "We envision being the FIRST CHOICE small and medium\n enterprises seek out for building an interactive website.\n Our team follows a user centered design process which\n means that our sole focus is YOU and your users. We\n analyze your competition to ensure that your website\n meets industry standards. By 2027, we will be THE partner\n in web design and development.  ",
+                  style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w300),
+                )
+              ]),
             ),
           ],
         ),
