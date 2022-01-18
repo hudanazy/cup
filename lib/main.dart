@@ -89,113 +89,60 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Welcome To ',
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 35,
-                        fontWeight: FontWeight.w300)),
-                Text(
-                  'Code Up',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.lightBlue,
-                      fontSize: 35,
-                      fontWeight: FontWeight.w300),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Where ',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.black,
-                      fontSize: 35,
-                      fontWeight: FontWeight.w300),
-                ),
-                Text(
-                  'Big ',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.black,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'Dreams become ',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.black,
-                      fontSize: 35,
-                      fontWeight: FontWeight.w300),
-                ),
-                Text(
-                  'Alive ',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.lightGreen, fontSize: 35),
-                ),
-              ],
-            ),
-            Text(
-              'We are coming in:',
-              style: GoogleFonts.montserrat(
-                  color: Colors.black,
-                  fontSize: 35,
-                  fontWeight: FontWeight.w300),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text(
-                    '${duration.inDays.remainder(365).toString().padLeft(2, '0')} :',
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 45,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    "Days",
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300),
-                  )
-                ]),
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text(
-                    ' ${duration.inHours.remainder(24).toString().padLeft(2, '0')} :',
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 45,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    "Hours",
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300),
-                  )
-                ]),
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text(
-                    ' ${duration.inMinutes.remainder(24).toString().padLeft(2, '0')} ',
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 45,
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    "Min",
-                    style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300),
-                  )
-                ]),
-              ],
+            Container(
+              color: Colors.grey[100],
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Welcome To ',
+                            style: GoogleFonts.montserrat(
+                                color: Colors.black,
+                                fontSize: 35,
+                                fontWeight: FontWeight.w300)),
+                        Text(
+                          'Code Up',
+                          style: GoogleFonts.montserrat(
+                              color: Colors.lightBlue,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w300),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Where ',
+                          style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          'Big ',
+                          style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Dreams become ',
+                          style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          'Alive ',
+                          style: GoogleFonts.montserrat(
+                              color: Colors.lightGreen, fontSize: 35),
+                        ),
+                      ],
+                    ),
+                  ]),
             ),
             SizedBox(
               height: 20,
@@ -220,6 +167,82 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontWeight: FontWeight.w300),
                 )
               ]),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              color: Colors.grey[100],
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'We are coming in:',
+                      style: GoogleFonts.montserrat(
+                          color: Colors.black,
+                          fontSize: 40,
+                          fontWeight: FontWeight.w300),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '${duration.inDays.remainder(365).toString().padLeft(2, '0')} :',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 45,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                              Text(
+                                "Days",
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w300),
+                              )
+                            ]),
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                ' ${duration.inHours.remainder(24).toString().padLeft(2, '0')} :',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 45,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                              Text(
+                                "Hours",
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w300),
+                              )
+                            ]),
+                        Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                ' ${duration.inMinutes.remainder(24).toString().padLeft(2, '0')} ',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 45,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                              Text(
+                                "Min",
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.black,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w300),
+                              )
+                            ]),
+                      ],
+                    ),
+                  ]),
             ),
           ],
         ),
