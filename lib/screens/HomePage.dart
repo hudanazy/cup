@@ -1,6 +1,6 @@
 // import 'package:flutter_web/widgets/bottom_bar.dart';
 // import 'package:flutter_web/widgets/carousel.dart';
-// import 'package:flutter_web/widgets/featured_heading.dart';
+import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/featured_tiles.dart';
 // import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
 // import 'package:flutter_web/widgets/main_heading.dart';
@@ -53,12 +53,22 @@ class _HomePageState extends State<HomePage> {
                   height: screenSize.height * 0.65,
                   width: screenSize.width,
                   child: Image.asset(
-                    'assets/images/background.png',
+                    'background.png',
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              FloatingQuickAccessBar(screenSize: screenSize)
+              Column(
+                children: [
+                  FloatingQuickAccessBar(screenSize: screenSize),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  FeaturedHeading(
+                    screenSize: screenSize,
+                  ),
+                ],
+              )
             ],
           ),
         ],
