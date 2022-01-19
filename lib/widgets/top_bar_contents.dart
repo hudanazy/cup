@@ -66,7 +66,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[0]
                                   ? Color(0xFF077bd7)
-                                  : Colors.blueGrey,
+                                  : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
                         ),
@@ -101,7 +101,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[1]
                                   ? Color(0xFF077bd7)
-                                  : Colors.blueGrey,
+                                  : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
                         ),
@@ -132,11 +132,11 @@ class _TopBarContentsState extends State<TopBarContents> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Goals',
+                          'Services',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[2]
                                   ? Color(0xFF077bd7)
-                                  : Colors.blueGrey,
+                                  : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
                         ),
@@ -171,7 +171,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[3]
                                   ? Color(0xFF077bd7)
-                                  : Colors.blueGrey,
+                                  : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
                         ),
@@ -194,12 +194,12 @@ class _TopBarContentsState extends State<TopBarContents> {
                     width: screenSize.width / 15,
                     child: ElevatedButton(
                       child: Text(
-                        'LogIn',
+                        'Login',
                         style: GoogleFonts.montserrat(fontSize: 18),
                       ),
                       style: ButtonStyle(
                           backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.blueGrey),
+                              MaterialStateProperty.all<Color>(Colors.blue),
                           padding: MaterialStateProperty.all<EdgeInsets>(
                               EdgeInsets.all(5)),
                           // foregroundColor:
@@ -208,8 +208,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15),
-                                      side:
-                                          BorderSide(color: Colors.blueGrey)))),
+                                      side: BorderSide(color: Colors.blue)))),
                       onPressed: () {},
                     ),
                   ),

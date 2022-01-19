@@ -2,7 +2,7 @@ import 'package:cup/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FeaturedHeading extends StatelessWidget {
+class FeaturedHeading extends StatefulWidget {
   const FeaturedHeading({
     Key? key,
     required this.screenSize,
@@ -11,43 +11,52 @@ class FeaturedHeading extends StatelessWidget {
   final Size screenSize;
 
   @override
+  State<FeaturedHeading> createState() => _FeaturedHeadingState();
+}
+
+class _FeaturedHeadingState extends State<FeaturedHeading> {
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[100],
       // width: screenSize.width / 3,
       padding: EdgeInsets.only(
-        top: screenSize.height * 0.06,
-        left: screenSize.width / 15,
-        right: screenSize.width / 15,
-        bottom: screenSize.width / 15,
+        top: widget.screenSize.height * 0.05,
+        left: ResponsiveWidget.isSmallScreen(context)
+            ? widget.screenSize.width / 12
+            : widget.screenSize.width / 5,
+        right: ResponsiveWidget.isSmallScreen(context)
+            ? widget.screenSize.width / 12
+            : widget.screenSize.width / 5,
+        bottom: widget.screenSize.height * 0.10,
       ),
-      child: Padding(
-        padding: EdgeInsets.only(
-            // top: screenSize.height * 0.06,
-            // left: screenSize.width / 15,
-            // right: screenSize.width / 15,
-            ),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'About',
-              style: GoogleFonts.montserrat(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.blueGrey),
-            ),
-            SizedBox(
-              width: screenSize.width / 25,
-            ),
-            Text(
-              '',
-              textAlign: TextAlign.end,
-            ),
-          ],
-        ),
+      // child: Padding(
+      //   padding: EdgeInsets.only(
+      //       // top: screenSize.height * 0.06,
+      //       // left: screenSize.width / 15,
+      //       // right: screenSize.width / 15,
+      //       ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        //  mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'About Us',
+            style: GoogleFonts.montserrat(
+                fontSize: 40,
+                fontWeight: FontWeight.w600,
+                color: Colors.blueGrey),
+          ),
+          SizedBox(
+            width: widget.screenSize.width / 25,
+          ),
+          Text(
+            'cdc',
+            textAlign: TextAlign.end,
+          ),
+        ],
       ),
+      //),\
     );
   }
 }

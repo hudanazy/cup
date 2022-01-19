@@ -8,6 +8,7 @@ import 'package:cup/widgets/featured_heading.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
+import 'package:cup/widgets/featured_tiles.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,39 +40,46 @@ class _HomePageState extends State<HomePage> {
         : 1;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 70),
         child: TopBarContents(_opacity),
       ),
-      body: Column(
-        children: [
-          Stack(
-            children: [
-              Container(
-                child: SizedBox(
-                  height: screenSize.height * 0.65,
-                  width: screenSize.width,
-                  child: Image.asset(
-                    'background.png',
-                    fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  child: SizedBox(
+                    height: screenSize.height * 0.65,
+                    width: screenSize.width,
+                    child: Image.asset(
+                      'images/home2.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-              ),
-              Column(
-                children: [
-                  FloatingQuickAccessBar(screenSize: screenSize),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  FeaturedHeading(
-                    screenSize: screenSize,
-                  ),
-                ],
-              )
-            ],
-          ),
-        ],
+                Column(
+                  children: [
+                    FloatingQuickAccessBar(screenSize: screenSize),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    FeaturedHeading(
+                      screenSize: screenSize,
+                    ),
+                    FeaturedTiles(screenSize: screenSize),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
