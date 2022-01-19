@@ -35,10 +35,10 @@ class _TopBarContentsState extends State<TopBarContents> {
           children: [
             Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
-                    width: screenSize.width / 10,
+                    width: screenSize.width / 8,
                   ),
                   Text(
                     'CUP',
@@ -51,6 +51,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
+                    hoverColor: Colors.transparent,
                     onHover: (value) {
                       setState(() {
                         value ? _isHovering[0] = true : _isHovering[0] = false;
@@ -65,9 +66,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[0]
                                   ? Color(0xFF077bd7)
-                                  : Color(0xFF077bd7),
+                                  : Colors.blueGrey,
                               fontWeight: FontWeight.w400,
-                              fontSize: 16),
+                              fontSize: 18),
                         ),
                         Visibility(
                           maintainAnimation: true,
@@ -85,6 +86,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
+                    hoverColor: Colors.transparent,
                     onHover: (value) {
                       setState(() {
                         value ? _isHovering[1] = true : _isHovering[1] = false;
@@ -99,9 +101,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[1]
                                   ? Color(0xFF077bd7)
-                                  : Color(0xFF077bd7),
+                                  : Colors.blueGrey,
                               fontWeight: FontWeight.w400,
-                              fontSize: 16),
+                              fontSize: 18),
                         ),
                         Visibility(
                           maintainAnimation: true,
@@ -119,6 +121,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
+                    hoverColor: Colors.transparent,
                     onHover: (value) {
                       setState(() {
                         value ? _isHovering[2] = true : _isHovering[2] = false;
@@ -133,9 +136,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[2]
                                   ? Color(0xFF077bd7)
-                                  : Color(0xFF077bd7),
+                                  : Colors.blueGrey,
                               fontWeight: FontWeight.w400,
-                              fontSize: 16),
+                              fontSize: 18),
                         ),
                         Visibility(
                           maintainAnimation: true,
@@ -153,6 +156,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
+                    hoverColor: Colors.transparent,
                     onHover: (value) {
                       setState(() {
                         value ? _isHovering[3] = true : _isHovering[3] = false;
@@ -167,9 +171,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           style: GoogleFonts.montserrat(
                               color: _isHovering[3]
                                   ? Color(0xFF077bd7)
-                                  : Color(0xFF077bd7),
+                                  : Colors.blueGrey,
                               fontWeight: FontWeight.w400,
-                              fontSize: 16),
+                              fontSize: 18),
                         ),
                         Visibility(
                           maintainAnimation: true,
@@ -184,6 +188,33 @@ class _TopBarContentsState extends State<TopBarContents> {
                         )
                       ],
                     ),
+                  ),
+                  SizedBox(width: screenSize.width / 15),
+                  Container(
+                    width: screenSize.width / 15,
+                    child: ElevatedButton(
+                      child: Text(
+                        'LogIn',
+                        style: GoogleFonts.montserrat(fontSize: 18),
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.blueGrey),
+                          padding: MaterialStateProperty.all<EdgeInsets>(
+                              EdgeInsets.all(5)),
+                          // foregroundColor:
+                          //     MaterialStateProperty.all<Color>(Colors.blue),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15),
+                                      side:
+                                          BorderSide(color: Colors.blueGrey)))),
+                      onPressed: () {},
+                    ),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 8,
                   ),
                 ],
               ),

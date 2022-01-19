@@ -5,6 +5,7 @@
 // import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
 // import 'package:flutter_web/widgets/main_heading.dart';
 // import 'package:flutter_web/widgets/menu_drawer.dart';
+import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +39,7 @@ class _HomePageState extends State<HomePage> {
         : 1;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 70),
         child: TopBarContents(_opacity),
@@ -56,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              FloatingQuickAccessBar(screenSize: screenSize)
             ],
           ),
         ],
