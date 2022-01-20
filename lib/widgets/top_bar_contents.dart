@@ -40,18 +40,22 @@ class _TopBarContentsState extends State<TopBarContents> {
                   SizedBox(
                     width: screenSize.width / 8,
                   ),
-                  Text(
-                    'CUP',
-                    style: GoogleFonts.montserrat(
-                      color: Colors.red[600],
-                      // Color(0xFF077bd7),
-                      fontSize: 26,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 3,
+                  // Text(
+                  //   'CUP',
+                  //   style: GoogleFonts.montserrat(
+                  //     color: Colors.red[600],
+                  //     // Color(0xFF077bd7),
+                  //     fontSize: 26,
+                  //     fontWeight: FontWeight.w500,
+                  //     letterSpacing: 3,
+                  //   ),
+                  // ),
+                  Container(
+                    height: 30,
+                    width: screenSize.width / 8,
+                    child: Image.asset(
+                      'images/LogoSmall1.png',
                     ),
-                  ),
-                  Image.asset(
-                    'images/logo.png',
                   ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
