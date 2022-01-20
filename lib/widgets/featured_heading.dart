@@ -18,7 +18,7 @@ class _FeaturedHeadingState extends State<FeaturedHeading> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      color: Colors.white,
       // width: screenSize.width / 3,
       padding: EdgeInsets.only(
         top: widget.screenSize.height * 0.05,
@@ -43,9 +43,7 @@ class _FeaturedHeadingState extends State<FeaturedHeading> {
           Text(
             'About Us',
             style: GoogleFonts.montserrat(
-                fontSize: 40,
-                fontWeight: FontWeight.w600,
-                color: Colors.blueGrey),
+                fontSize: 40, fontWeight: FontWeight.w600, color: Colors.black),
           ),
           SizedBox(
             width: widget.screenSize.width / 25,

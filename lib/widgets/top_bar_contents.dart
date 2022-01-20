@@ -43,7 +43,8 @@ class _TopBarContentsState extends State<TopBarContents> {
                   Text(
                     'CUP',
                     style: GoogleFonts.montserrat(
-                      color: Color(0xFF077bd7),
+                      color: Colors.red[600],
+                      // Color(0xFF077bd7),
                       fontSize: 26,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 3,
@@ -198,8 +199,8 @@ class _TopBarContentsState extends State<TopBarContents> {
                         style: GoogleFonts.montserrat(fontSize: 18),
                       ),
                       style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.blue),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.red[600] as Color),
                           padding: MaterialStateProperty.all<EdgeInsets>(
                               EdgeInsets.all(5)),
                           // foregroundColor:
@@ -208,7 +209,8 @@ class _TopBarContentsState extends State<TopBarContents> {
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15),
-                                      side: BorderSide(color: Colors.blue)))),
+                                      side: BorderSide(
+                                          color: Colors.red[600] as Color)))),
                       onPressed: () {},
                     ),
                   ),

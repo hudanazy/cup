@@ -56,8 +56,8 @@ class _HomePageState extends State<HomePage> {
                     height: screenSize.height * 0.65,
                     width: screenSize.width,
                     child: Image.asset(
-                      'images/home2.png',
-                      fit: BoxFit.contain,
+                      'images/cubes.png',
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
