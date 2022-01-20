@@ -50,6 +50,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                       letterSpacing: 3,
                     ),
                   ),
+                  Image.asset(
+                    'images/logo.png',
+                  ),
                   SizedBox(width: screenSize.width / 15),
                   InkWell(
                     hoverColor: Colors.transparent,
