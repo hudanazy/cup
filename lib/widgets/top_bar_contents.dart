@@ -1,3 +1,4 @@
+import 'package:cup/screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -54,7 +55,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     height: 30,
                     width: screenSize.width / 8,
                     child: Image.asset(
-                      'images/LogoSmall1.png',
+                      'images/logosmaller.png',
                     ),
                   ),
                   SizedBox(width: screenSize.width / 15),
@@ -73,7 +74,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           'Home',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[0]
-                                  ? Color(0xFF077bd7)
+                                  ? Colors.red[600]
                                   : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
@@ -86,7 +87,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           child: Container(
                             height: 2,
                             width: 20,
-                            color: Colors.blue,
+                            color: Colors.red[600],
                           ),
                         )
                       ],
@@ -108,7 +109,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           'About',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[1]
-                                  ? Color(0xFF077bd7)
+                                  ? Colors.red[600]
                                   : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
@@ -121,7 +122,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           child: Container(
                             height: 2,
                             width: 20,
-                            color: Colors.blue,
+                            color: Colors.red[600],
                           ),
                         )
                       ],
@@ -143,7 +144,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           'Services',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[2]
-                                  ? Color(0xFF077bd7)
+                                  ? Colors.red[600]
                                   : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
@@ -156,7 +157,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           child: Container(
                             height: 2,
                             width: 20,
-                            color: Colors.blue,
+                            color: Colors.red[600],
                           ),
                         )
                       ],
@@ -178,7 +179,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           'Contact',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[3]
-                                  ? Color(0xFF077bd7)
+                                  ? Colors.red[600]
                                   : Colors.black87,
                               fontWeight: FontWeight.w400,
                               fontSize: 18),
@@ -191,7 +192,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           child: Container(
                             height: 2,
                             width: 20,
-                            color: Colors.blue,
+                            color: Colors.red[600],
                           ),
                         )
                       ],
@@ -218,7 +219,12 @@ class _TopBarContentsState extends State<TopBarContents> {
                                       borderRadius: BorderRadius.circular(15),
                                       side: BorderSide(
                                           color: Colors.red[600] as Color)))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
+                      },
                     ),
                   ),
                   SizedBox(
