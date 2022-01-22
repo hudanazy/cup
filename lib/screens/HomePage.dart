@@ -1,11 +1,13 @@
 // import 'package:flutter_web/widgets/bottom_bar.dart';
 // import 'package:flutter_web/widgets/carousel.dart';
+import 'package:cup/widgets/carousel.dart';
 import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/featured_tiles.dart';
 // import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
 // import 'package:flutter_web/widgets/main_heading.dart';
 // import 'package:flutter_web/widgets/menu_drawer.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
+import 'package:cup/widgets/main_heading.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 import 'package:cup/widgets/featured_tiles.dart';
@@ -63,17 +65,18 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Column(
                   children: [
-                    FloatingQuickAccessBar(screenSize: screenSize),
                     SizedBox(
-                      height: 30,
+                      height: screenSize.height / 5,
                     ),
+                    MainCarousel(),
+                    // FloatingQuickAccessBar(screenSize: screenSize),
+
                     FeaturedHeading(
                       screenSize: screenSize,
                     ),
                     FeaturedTiles(screenSize: screenSize),
-                    SizedBox(
-                      height: 30,
-                    ),
+                    MainHeading(screenSize: screenSize),
+                    // MainCarousel(),
                   ],
                 )
               ],
