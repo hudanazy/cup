@@ -235,10 +235,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                                       side: BorderSide(
                                           color: Colors.red[600] as Color)))),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LoginPage()),
-                        );
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CountdownPage()));
                       },
                     ),
                   ),
