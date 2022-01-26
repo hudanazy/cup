@@ -1,3 +1,7 @@
+import 'package:cup/screens/HomePage.dart';
+import 'package:cup/screens/about.dart';
+import 'package:cup/screens/countdown.dart';
+import 'package:cup/screens/services.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -65,7 +69,10 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[0] = true : _isHovering[0] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    },
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -100,12 +107,17 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[1] = true : _isHovering[1] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ServicePage()));
+                    },
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'About',
+                          'Services',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[1]
                                   ? Color(0xFF077bd7)
@@ -135,12 +147,15 @@ class _TopBarContentsState extends State<TopBarContents> {
                         value ? _isHovering[2] = true : _isHovering[2] = false;
                       });
                     },
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => AboutPage()));
+                    },
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Services',
+                          'About Us',
                           style: GoogleFonts.montserrat(
                               color: _isHovering[2]
                                   ? Color(0xFF077bd7)
@@ -162,47 +177,47 @@ class _TopBarContentsState extends State<TopBarContents> {
                       ],
                     ),
                   ),
-                  SizedBox(width: screenSize.width / 15),
-                  InkWell(
-                    hoverColor: Colors.transparent,
-                    onHover: (value) {
-                      setState(() {
-                        value ? _isHovering[3] = true : _isHovering[3] = false;
-                      });
-                    },
-                    onTap: () {},
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'Contact',
-                          style: GoogleFonts.montserrat(
-                              color: _isHovering[3]
-                                  ? Color(0xFF077bd7)
-                                  : Colors.black87,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18),
-                        ),
-                        Visibility(
-                          maintainAnimation: true,
-                          maintainState: true,
-                          maintainSize: true,
-                          visible: _isHovering[3],
-                          child: Container(
-                            height: 2,
-                            width: 20,
-                            color: Colors.blue,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                  // SizedBox(width: screenSize.width / 15),
+                  // InkWell(
+                  //   hoverColor: Colors.transparent,
+                  //   onHover: (value) {
+                  //     setState(() {
+                  //       value ? _isHovering[3] = true : _isHovering[3] = false;
+                  //     });
+                  //   },
+                  //   onTap: () {},
+                  //   child: Column(
+                  //     mainAxisSize: MainAxisSize.min,
+                  //     children: [
+                  //       Text(
+                  //         'Contact',
+                  //         style: GoogleFonts.montserrat(
+                  //             color: _isHovering[3]
+                  //                 ? Color(0xFF077bd7)
+                  //                 : Colors.black87,
+                  //             fontWeight: FontWeight.w400,
+                  //             fontSize: 18),
+                  //       ),
+                  //       Visibility(
+                  //         maintainAnimation: true,
+                  //         maintainState: true,
+                  //         maintainSize: true,
+                  //         visible: _isHovering[3],
+                  //         child: Container(
+                  //           height: 2,
+                  //           width: 20,
+                  //           color: Colors.blue,
+                  //         ),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
                   SizedBox(width: screenSize.width / 15),
                   Container(
-                    width: screenSize.width / 15,
+                    width: screenSize.width / 10,
                     child: ElevatedButton(
                       child: Text(
-                        'Login',
+                        'Contact Us',
                         style: GoogleFonts.montserrat(fontSize: 18),
                       ),
                       style: ButtonStyle(
@@ -218,7 +233,12 @@ class _TopBarContentsState extends State<TopBarContents> {
                                       borderRadius: BorderRadius.circular(15),
                                       side: BorderSide(
                                           color: Colors.red[600] as Color)))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CountdownPage()));
+                      },
                     ),
                   ),
                   SizedBox(

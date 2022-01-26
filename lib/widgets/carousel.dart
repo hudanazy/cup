@@ -13,8 +13,8 @@ class _MainCarouselState extends State<MainCarousel> {
 
   final CarouselController _controller = CarouselController();
 
-  List _isHovering = [false, false, false, false, false, false, false];
-  List _isSelected = [true, false, false, false, false, false, false];
+  List _isHovering = [false, false, false];
+  List _isSelected = [true, false, false];
 
   int _current = 0;
 
@@ -22,9 +22,6 @@ class _MainCarouselState extends State<MainCarousel> {
     'images/home1.png',
     'images/home2.png',
     'images/cup2.png',
-    'images/test1.jpeg',
-    'images/test2.jpeg',
-    'images/test3.jpeg',
   ];
 
   // final List<String> places = [

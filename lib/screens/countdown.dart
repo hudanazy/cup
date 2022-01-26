@@ -9,18 +9,18 @@ import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/menu_drawer.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/main_heading.dart';
+import 'package:cup/widgets/service_tiles.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 import 'package:cup/widgets/featured_tiles.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cup/screens/countdown.dart';
 
-class HomePage extends StatefulWidget {
+class CountdownPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _CountdownPageState createState() => _CountdownPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _CountdownPageState extends State<CountdownPage> {
   final ScrollController _scrollController = ScrollController();
   double _scrollPosition = 0;
   double _opacity = 0;
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   child: SizedBox(
-                    height: screenSize.height * 0.3,
+                    height: screenSize.height * 0.65,
                     width: screenSize.width,
                     child: Image.asset(
                       'images/cubes.png',
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       width: screenSize.width,
                       child: Text(
-                        'Software ideas developed into reality',
+                        'Countdown',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                             fontSize: 40,
@@ -86,68 +86,14 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey[800]),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.only(
-                        //  top: screenSize.height / 10,
-                        bottom: screenSize.height / 15,
-                      ),
-                      width: screenSize.width,
-                      child: Text(
-                        'Web development, Android App Development, UI Design',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey[850]),
-                      ),
-                    ),
-                    Container(
-                      //   width: screenSize.width / 5,
-                      child: ElevatedButton(
-                        child: Text(
-                          ' Tell us what you have in mind ',
-                          style: GoogleFonts.montserrat(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white),
-                        ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                Colors.red[600] as Color),
-                            padding: MaterialStateProperty.all<EdgeInsets>(
-                                EdgeInsets.all(5)),
-                            // foregroundColor:
-                            //     MaterialStateProperty.all<Color>(Colors.blue),
-                            shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                    side: BorderSide(
-                                        color: Colors.red[600] as Color)))),
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CountdownPage()));
-                        },
-                      ),
-                    ),
                     SizedBox(
                       height: screenSize.height / 5,
                     ),
-                    MainCarousel(),
-                    SizedBox(
-                      height: screenSize.height / 5,
-                    ),
-                    // FloatingQuickAccessBar(screenSize: screenSize),
-
-                    // FeaturedHeading(
-                    //   screenSize: screenSize,
-                    // ),
-                    // FeaturedTiles(screenSize: screenSize),
-                    // MainHeading(screenSize: screenSize),
-                    // MainCarousel(),
                     BottomBar()
+
+                    // MainHeading(screenSize: screenSize),
+                    // FeaturedTiles(screenSize: screenSize),
+                    // // MainCarousel(),
                   ],
                 )
               ],
