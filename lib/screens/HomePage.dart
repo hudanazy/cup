@@ -2,6 +2,7 @@
 // import 'package:flutter_web/widgets/carousel.dart';
 import 'package:cup/widgets/bottombar.dart';
 import 'package:cup/widgets/carousel.dart';
+import 'package:cup/widgets/count_down.dart';
 import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/featured_tiles.dart';
 // import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
@@ -101,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey[850]),
                       ),
                     ),
+                    CountDown(screenSize: screenSize),
                     Container(
                       //   width: screenSize.width / 5,
                       child: ElevatedButton(
