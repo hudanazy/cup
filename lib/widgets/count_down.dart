@@ -68,10 +68,10 @@ class _CountDown extends State<CountDown> {
         children: [
           Text(
             'We are Coming in:',
-            style: GoogleFonts.montserrat(
-                fontSize: 40,
+            style: GoogleFonts.jetBrainsMono(
+                fontSize: 35,
                 fontWeight: FontWeight.w500,
-                color: Colors.grey[850]),
+                color: Colors.grey[800]),
           ),
           SizedBox(
             width: widget.screenSize.width / 25,
@@ -82,15 +82,15 @@ class _CountDown extends State<CountDown> {
               Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Text(
                   '${duration.inDays.remainder(365).toString().padLeft(2, '0')} :',
-                  style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                  style: GoogleFonts.jetBrainsMono(
+                      color: Colors.grey[800],
                       fontSize: 45,
                       fontWeight: FontWeight.w300),
                 ),
                 Text(
                   "Days",
-                  style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                  style: GoogleFonts.jetBrainsMono(
+                      color: Colors.grey[800],
                       fontSize: 30,
                       fontWeight: FontWeight.w300),
                 )
@@ -99,14 +99,14 @@ class _CountDown extends State<CountDown> {
                 Text(
                   ' ${duration.inHours.remainder(24).toString().padLeft(2, '0')} :',
                   style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                      color: Colors.grey[800],
                       fontSize: 45,
                       fontWeight: FontWeight.w300),
                 ),
                 Text(
                   "Hours",
                   style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                      color: Colors.grey[800],
                       fontSize: 30,
                       fontWeight: FontWeight.w300),
                 )
@@ -115,14 +115,14 @@ class _CountDown extends State<CountDown> {
                 Text(
                   ' ${duration.inMinutes.remainder(24).toString().padLeft(2, '0')} ',
                   style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                      color: Colors.grey[800],
                       fontSize: 45,
                       fontWeight: FontWeight.w300),
                 ),
                 Text(
                   "Min",
                   style: GoogleFonts.montserrat(
-                      color: Colors.black,
+                      color: Colors.grey[800],
                       fontSize: 30,
                       fontWeight: FontWeight.w300),
                 )

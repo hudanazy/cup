@@ -79,7 +79,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       children: [
                         Text(
                           'Home',
-                          style: GoogleFonts.montserrat(
+                          style: GoogleFonts.jetBrainsMono(
                               color: _isHovering[0]
                                   ? Colors.red[600]
                                   : Colors.black87,
@@ -119,7 +119,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       children: [
                         Text(
                           'Services',
-                          style: GoogleFonts.montserrat(
+                          style: GoogleFonts.jetBrainsMono(
                               color: _isHovering[1]
                                   ? Colors.red[600]
                                   : Colors.black87,
@@ -157,7 +157,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       children: [
                         Text(
                           'About Us',
-                          style: GoogleFonts.montserrat(
+                          style: GoogleFonts.jetBrainsMono(
                               color: _isHovering[2]
                                   ? Colors.red[600]
                                   : Colors.black87,
@@ -219,7 +219,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     child: ElevatedButton(
                       child: Text(
                         'Contact Us',
-                        style: GoogleFonts.montserrat(fontSize: 18),
+                        style: GoogleFonts.jetBrainsMono(fontSize: 18),
                       ),
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(

@@ -1,5 +1,6 @@
 import 'package:cup/widgets/responsive.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ServiceTiles extends StatelessWidget {
   ServiceTiles({
@@ -10,15 +11,15 @@ class ServiceTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'images/blu.png',
-    'images/blu.png',
-    'images/blu.png',
+    'images/web.png',
+    'images/mobile.png',
+    'images/ui.png',
   ];
 
   final List<String> title = [
-    'Gather Go App',
-    'Saudi Recruit Website',
-    'On Time App'
+    'Web Development',
+    'Android Development',
+    'UI Design'
   ];
 
   @override
@@ -80,47 +81,77 @@ class ServiceTiles extends StatelessWidget {
         right: screenSize.width / 15,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ...Iterable<int>.generate(assets.length).map(
             (int pageIndex) => Column(
               children: [
                 SizedBox(
                   height: screenSize.width / 6,
-                  width: screenSize.width / 3.8,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(
-                            assets[pageIndex],
-                            // fit: BoxFit.cover,
+                  width: screenSize.width / 6,
+                  child: Stack(children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage(
+                              assets[pageIndex],
+                              // fit: BoxFit.cover,
+                            ),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0, 10),
+                              blurRadius: 20,
+                              spreadRadius: 5,
+                              color: Colors.grey.withOpacity(0.3),
+                            )
+                          ]),
+                    ),
+                    Positioned(
+                      bottom: 7,
+                      // left: screenSize.width / 30,
+                      child: Row(children: [
+                        SizedBox(
+                          width: screenSize.width / 50,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(
+                              //   top: screenSize.height / 18,
+                              //  bottom: screenSize.height / 15,
+                              ),
+                          width: screenSize.width / 7,
+                          child: Text(
+                            title[pageIndex],
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black),
                           ),
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 10),
-                            blurRadius: 20,
-                            spreadRadius: 5,
-                            color: Colors.grey.withOpacity(0.3),
-                          )
-                        ]),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: screenSize.height / 70,
-                  ),
-                  child: Text(
-                    title[pageIndex],
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w500,
+                      ]),
                     ),
-                  ),
+                    SizedBox(
+                      height: 5,
+                    )
+                  ]),
                 ),
+
+                // Padding(
+                //   padding: EdgeInsets.only(
+                //     top: screenSize.height / 70,
+                //   ),
+                //   child: Text(
+                //     title[pageIndex],
+                //     style: TextStyle(
+                //       fontSize: 16,
+                //       fontFamily: 'Montserrat',
+                //       fontWeight: FontWeight.w500,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

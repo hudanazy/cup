@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                       child: Text(
                         'Software ideas developed into reality',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.montserrat(
+                        style: GoogleFonts.jetBrainsMono(
                             fontSize: 40,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey[800]),
@@ -90,28 +90,31 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       padding: EdgeInsets.only(
                         //  top: screenSize.height / 10,
-                        bottom: screenSize.height / 15,
+                        bottom: screenSize.height / 20,
                       ),
                       width: screenSize.width,
                       child: Text(
-                        'Web development, Android App Development, UI Design',
+                        'Web development - Android App Development - UI Design',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
+                        style: GoogleFonts.jetBrainsMono(
                             fontSize: 22,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey[850]),
                       ),
                     ),
                     CountDown(screenSize: screenSize),
+                    SizedBox(
+                      height: screenSize.height / 14,
+                    ),
                     Container(
                       //   width: screenSize.width / 5,
                       child: ElevatedButton(
                         child: Text(
                           ' Tell us what you have in mind ',
-                          style: GoogleFonts.montserrat(
+                          style: GoogleFonts.jetBrainsMono(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
-                              color: Colors.white),
+                              color: Colors.grey[100]),
                         ),
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(

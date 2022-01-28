@@ -45,7 +45,7 @@ class _ServicePageState extends State<ServicePage> {
         : 1;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white12,
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 70),
@@ -58,7 +58,7 @@ class _ServicePageState extends State<ServicePage> {
               children: [
                 Container(
                   child: SizedBox(
-                    height: screenSize.height * 0.65,
+                    height: screenSize.height * 0.5,
                     width: screenSize.width,
                     child: Image.asset(
                       'images/cubes.png',
@@ -80,9 +80,9 @@ class _ServicePageState extends State<ServicePage> {
                       child: Text(
                         'What we can do for you',
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.montserrat(
+                        style: GoogleFonts.jetBrainsMono(
                             fontSize: 40,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                             color: Colors.grey[800]),
                       ),
                     ),

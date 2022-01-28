@@ -2,6 +2,7 @@
 // import 'package:flutter_web/widgets/carousel.dart';
 import 'package:cup/widgets/bottombar.dart';
 import 'package:cup/widgets/carousel.dart';
+import 'package:cup/widgets/count_down.dart';
 import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/featured_tiles.dart';
 // import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
@@ -69,7 +70,7 @@ class _CountdownPageState extends State<CountdownPage> {
                 Column(
                   children: [
                     SizedBox(
-                      height: screenSize.height / 5,
+                      height: screenSize.height / 6,
                     ),
                     Container(
                       padding: EdgeInsets.only(
@@ -77,14 +78,15 @@ class _CountdownPageState extends State<CountdownPage> {
                         bottom: screenSize.height / 15,
                       ),
                       width: screenSize.width,
-                      child: Text(
-                        'Countdown',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.montserrat(
-                            fontSize: 40,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey[800]),
-                      ),
+                      child: CountDown(screenSize: screenSize),
+                      // Text(
+                      //   'Countdown',
+                      //   textAlign: TextAlign.center,
+                      //   style: GoogleFonts.montserrat(
+                      //       fontSize: 40,
+                      //       fontWeight: FontWeight.w500,
+                      //       color: Colors.grey[800]),
+                      // ),
                     ),
                     SizedBox(
                       height: screenSize.height / 5,

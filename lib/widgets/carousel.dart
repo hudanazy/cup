@@ -19,9 +19,9 @@ class _MainCarouselState extends State<MainCarousel> {
   int _current = 0;
 
   final List<String> images = [
-    'images/home1.png',
-    'images/home2.png',
-    'images/cup2.png',
+    'images/web_carousel.jpg',
+    'images/mobile_carousel.jpg',
+    'images/ui_carousel.jpg',
   ];
 
   // final List<String> places = [
@@ -33,7 +33,11 @@ class _MainCarouselState extends State<MainCarousel> {
   //   'ANTARCTICA',
   // ];
 
-  final List<String> places = ['Web', 'Mobile App', 'UI Design'];
+  final List<String> places = [
+    'Web Development',
+    'Android Development',
+    'UI Design'
+  ];
 
   List<Widget> generateImageTiles(screenSize) {
     return images
@@ -136,8 +140,8 @@ class _MainCarouselState extends State<MainCarousel> {
                                     places[i],
                                     style: TextStyle(
                                       color: _isHovering[i]
-                                          ? Colors.blueGrey[900]
-                                          : Colors.blueGrey,
+                                          ? Colors.red[600]
+                                          : Colors.black,
                                     ),
                                   ),
                                 ),
@@ -153,7 +157,7 @@ class _MainCarouselState extends State<MainCarousel> {
                                   child: Container(
                                     height: 5,
                                     decoration: BoxDecoration(
-                                      color: Colors.blueGrey,
+                                      color: Colors.red[600],
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(10),
                                       ),
