@@ -9,6 +9,7 @@ import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/menu_drawer.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/main_heading.dart';
+import 'package:cup/widgets/our_values.dart';
 import 'package:cup/widgets/service_tiles.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
@@ -78,6 +79,7 @@ class _AboutPageState extends State<AboutPage> {
                     SizedBox(
                       height: screenSize.height / 5,
                     ),
+                    OurValues(screenSize: screenSize),
                     // MainCarousel(),
                     BottomBar()
                   ],
