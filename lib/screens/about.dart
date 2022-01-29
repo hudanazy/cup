@@ -73,8 +73,8 @@ class _AboutPageState extends State<AboutPage> {
                     ),
 
                     MainHeading(screenSize: screenSize),
-                    FeaturedHeading(screenSize: screenSize),
-                    FeaturedTiles(screenSize: screenSize),
+                    // FeaturedHeading(screenSize: screenSize),
+                    // FeaturedTiles(screenSize: screenSize),
                     SizedBox(
                       height: screenSize.height / 5,
                     ),
