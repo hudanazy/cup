@@ -98,14 +98,14 @@ class _CountDown extends State<CountDown> {
               Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Text(
                   ' ${duration.inHours.remainder(24).toString().padLeft(2, '0')} :',
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.jetBrainsMono(
                       color: Colors.grey[800],
                       fontSize: 45,
                       fontWeight: FontWeight.w300),
                 ),
                 Text(
                   "Hours",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.jetBrainsMono(
                       color: Colors.grey[800],
                       fontSize: 30,
                       fontWeight: FontWeight.w300),
@@ -121,7 +121,7 @@ class _CountDown extends State<CountDown> {
                 ),
                 Text(
                   "Min",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.jetBrainsMono(
                       color: Colors.grey[800],
                       fontSize: 30,
                       fontWeight: FontWeight.w300),

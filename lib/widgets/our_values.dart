@@ -29,20 +29,35 @@ class OurValues extends StatelessWidget {
                   color: Colors.grey[850]),
             ),
           ),
-          SizedBox(
-            width: screenSize.width / 10,
-          ),
+          // SizedBox(
+          //   width: screenSize.width / 10,
+          // ),
           Container(
-            width: screenSize.width / 3,
-            child: Text(
-              "1",
-              textAlign: TextAlign.left,
-              style: GoogleFonts.jetBrainsMono(
-                  fontSize: 60,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.grey[850]),
-            ),
-          )
+              width: screenSize.width / 3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "1",
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.jetBrainsMono(
+                        fontSize: 60,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey[850]),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 15,
+                  ),
+                  Text(
+                    "2",
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.jetBrainsMono(
+                        fontSize: 60,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey[850]),
+                  ),
+                ],
+              ))
         ]));
   }
 }
