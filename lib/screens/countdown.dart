@@ -72,22 +72,9 @@ class _CountdownPageState extends State<CountdownPage> {
                     SizedBox(
                       height: screenSize.height / 6,
                     ),
-                    Container(
-                      padding: EdgeInsets.only(
-                        top: screenSize.height / 10,
-                        bottom: screenSize.height / 15,
-                      ),
-                      width: screenSize.width,
-                      child: CountDown(screenSize: screenSize),
-                      // Text(
-                      //   'Countdown',
-                      //   textAlign: TextAlign.center,
-                      //   style: GoogleFonts.montserrat(
-                      //       fontSize: 40,
-                      //       fontWeight: FontWeight.w500,
-                      //       color: Colors.grey[800]),
-                      // ),
-                    ),
+
+                    CountDown(screenSize: screenSize),
+
                     SizedBox(
                       height: screenSize.height / 5,
                     ),

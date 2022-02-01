@@ -42,7 +42,7 @@ class _CountDown extends State<CountDown> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.transparent,
       // width: screenSize.width / 3,
       padding: /* EdgeInsets.only(
         top: widget.screenSize.height * 0.05,

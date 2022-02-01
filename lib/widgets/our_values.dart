@@ -29,11 +29,8 @@ class OurValues extends StatelessWidget {
                   color: Colors.grey[850]),
             ),
           ),
-          // SizedBox(
-          //   width: screenSize.width / 10,
-          // ),
           Container(
-              width: screenSize.width / 3,
+              width: screenSize.width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -46,7 +43,36 @@ class OurValues extends StatelessWidget {
                         color: Colors.grey[850]),
                   ),
                   SizedBox(
-                    width: screenSize.width / 15,
+                    width: screenSize.width / 45,
+                  ),
+                  Container(
+                    width: screenSize.width / 5,
+                    child: RichText(
+                        text: TextSpan(
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                            children: <TextSpan>[
+                          TextSpan(
+                            text: "Think big",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                          ),
+                          TextSpan(
+                            text:
+                                " we encourage ourselves and our customers to have no constraints of what they want to Build.",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey[850]),
+                          )
+                        ])),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 45,
                   ),
                   Text(
                     "2",
@@ -55,6 +81,78 @@ class OurValues extends StatelessWidget {
                         fontSize: 60,
                         fontWeight: FontWeight.w500,
                         color: Colors.grey[850]),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 45,
+                  ),
+                  Container(
+                    width: screenSize.width / 5,
+                    child: RichText(
+                        text: TextSpan(
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                            children: <TextSpan>[
+                          TextSpan(
+                            text: "Hungry to learn",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                          ),
+                          TextSpan(
+                            text:
+                                " we encourage ourselves and our team to never stop learning.",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey[850]),
+                          )
+                        ])),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 40,
+                  ),
+                  Text(
+                    "3",
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.jetBrainsMono(
+                        fontSize: 60,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey[850]),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 40,
+                  ),
+                  Container(
+                    width: screenSize.width / 5,
+                    child: RichText(
+                        text: TextSpan(
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                            children: <TextSpan>[
+                          TextSpan(
+                            text: "Customer centered",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[850]),
+                          ),
+                          TextSpan(
+                            text:
+                                " we care about involving our customers in every step of the way to grunt that it will come out just how they want it. ",
+                            style: GoogleFonts.jetBrainsMono(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey[850]),
+                          )
+                        ])),
+                  ),
+                  SizedBox(
+                    width: screenSize.width / 15,
                   ),
                 ],
               ))
