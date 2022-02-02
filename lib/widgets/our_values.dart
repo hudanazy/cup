@@ -50,14 +50,14 @@ class OurValues extends StatelessWidget {
                     child: RichText(
                         text: TextSpan(
                             style: GoogleFonts.jetBrainsMono(
-                                fontSize: 20,
+                                fontSize: 23,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey[850]),
                             children: <TextSpan>[
                           TextSpan(
                             text: "Think big",
                             style: GoogleFonts.jetBrainsMono(
-                                fontSize: 20,
+                                fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey[850]),
                           ),
@@ -97,7 +97,7 @@ class OurValues extends StatelessWidget {
                           TextSpan(
                             text: "Hungry to learn",
                             style: GoogleFonts.jetBrainsMono(
-                                fontSize: 20,
+                                fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey[850]),
                           ),
@@ -137,7 +137,7 @@ class OurValues extends StatelessWidget {
                           TextSpan(
                             text: "Customer centered",
                             style: GoogleFonts.jetBrainsMono(
-                                fontSize: 20,
+                                fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey[850]),
                           ),

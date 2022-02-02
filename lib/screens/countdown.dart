@@ -4,12 +4,9 @@ import 'package:cup/widgets/bottombar.dart';
 import 'package:cup/widgets/carousel.dart';
 import 'package:cup/widgets/count_down.dart';
 import 'package:cup/widgets/featured_heading.dart';
-// import 'package:flutter_web/widgets/featured_tiles.dart';
-// import 'package:flutter_web/widgets/floating_quick_access_bar.dart';
-// import 'package:flutter_web/widgets/main_heading.dart';
-// import 'package:flutter_web/widgets/menu_drawer.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/main_heading.dart';
+import 'package:cup/widgets/menu_drawer.dart';
 import 'package:cup/widgets/service_tiles.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
@@ -48,10 +45,25 @@ class _CountdownPageState extends State<CountdownPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 70),
-        child: TopBarContents(_opacity),
-      ),
+      appBar: screenSize.width < 800
+          ? AppBar(
+              iconTheme: IconThemeData(color: Colors.red[600]),
+              elevation: 0,
+              backgroundColor: Colors.white.withOpacity(0.5),
+              title: Container(
+                alignment: Alignment.center,
+                height: 30,
+                width: screenSize.width / 8,
+                child: Image.asset(
+                  'images/logosmaller.png',
+                ),
+              ),
+            )
+          : PreferredSize(
+              preferredSize: Size(screenSize.width, 70),
+              child: TopBarContents(_opacity),
+            ),
+      drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [

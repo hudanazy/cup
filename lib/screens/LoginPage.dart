@@ -8,6 +8,7 @@ import 'package:cup/widgets/featured_heading.dart';
 // import 'package:flutter_web/widgets/menu_drawer.dart';
 import 'package:cup/widgets/floating_quick_access_bar.dart';
 import 'package:cup/widgets/main_heading.dart';
+import 'package:cup/widgets/menu_drawer.dart';
 import 'package:cup/widgets/top_bar_contents.dart';
 import 'package:flutter/material.dart';
 import 'package:cup/widgets/featured_tiles.dart';
@@ -45,10 +46,25 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         backgroundColor: Colors.white,
         extendBodyBehindAppBar: true,
-        appBar: PreferredSize(
-          preferredSize: Size(screenSize.width, 70),
-          child: TopBarContents(_opacity),
-        ),
+        appBar: screenSize.width < 800
+            ? AppBar(
+                iconTheme: IconThemeData(color: Colors.red[600]),
+                elevation: 0,
+                backgroundColor: Colors.white.withOpacity(0.5),
+                title: Container(
+                  alignment: Alignment.center,
+                  height: 30,
+                  width: screenSize.width / 8,
+                  child: Image.asset(
+                    'images/logosmaller.png',
+                  ),
+                ),
+              )
+            : PreferredSize(
+                preferredSize: Size(screenSize.width, 70),
+                child: TopBarContents(_opacity),
+              ),
+        drawer: MenuDrawer(),
         body: new Stack(
           children: <Widget>[
             new Container(
